@@ -8,11 +8,13 @@
   "attributes": {
     "media": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
-        "videos"
+        "videos",
+        "audios",
+        "files"
       ]
     },
     "caption": {

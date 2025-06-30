@@ -183,7 +183,7 @@ export interface ContentMediaBlock extends Struct.ComponentSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    media: Schema.Attribute.Media<'images' | 'videos', true> &
+    media: Schema.Attribute.Media<'images' | 'videos' | 'audios' | 'files'> &
       Schema.Attribute.Required;
   };
 }
