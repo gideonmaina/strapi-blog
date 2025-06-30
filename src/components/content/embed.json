@@ -1,0 +1,62 @@
+{
+	"collectionName": "components_content_embeds",
+	"info": {
+		"displayName": "Embed",
+		"description": "Embed external content (YouTube, CodePen, etc.)"
+	},
+	"options": {},
+	"attributes": {
+		"url": {
+			"type": "string",
+			"required": true,
+			"maxLength": 500
+		},
+		"title": {
+			"type": "string",
+			"maxLength": 255,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"description": {
+			"type": "text",
+			"maxLength": 500,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"embedType": {
+			"type": "enumeration",
+			"enum": [
+				"youtube",
+				"vimeo",
+				"codepen",
+				"codesandbox",
+				"github-gist",
+				"twitter",
+				"instagram",
+				"custom"
+			],
+			"default": "custom"
+		},
+		"aspectRatio": {
+			"type": "enumeration",
+			"enum": [
+				"16:9",
+				"4:3",
+				"1:1",
+				"custom"
+			],
+			"default": "16:9"
+		},
+		"customHeight": {
+			"type": "integer",
+			"min": 100,
+			"max": 1000
+		}
+	}
+}

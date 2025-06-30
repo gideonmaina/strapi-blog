@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_content_callouts",
+  "info": {
+    "displayName": "Callout",
+    "description": "Highlighted callout or info box"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "maxLength": 255
+    },
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "info",
+      "enum": [
+        "info",
+        "warning",
+        "success",
+        "error",
+        "tip",
+        "note"
+      ]
+    },
+    "icon": {
+      "type": "string",
+      "maxLength": 50
+    }
+  }
+}

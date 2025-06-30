@@ -1,0 +1,68 @@
+{
+	"collectionName": "components_content_code_blocks",
+	"info": {
+		"displayName": "Code Block",
+		"description": "Code snippet with syntax highlighting"
+	},
+	"options": {},
+	"attributes": {
+		"code": {
+			"type": "text",
+			"required": true
+		},
+		"language": {
+			"type": "enumeration",
+			"enum": [
+				"javascript",
+				"typescript",
+				"python",
+				"html",
+				"css",
+				"scss",
+				"json",
+				"yaml",
+				"markdown",
+				"bash",
+				"shell",
+				"sql",
+				"php",
+				"java",
+				"cpp",
+				"c",
+				"go",
+				"rust",
+				"ruby",
+				"swift",
+				"kotlin",
+				"dart",
+				"xml",
+				"dockerfile",
+				"nginx",
+				"apache",
+				"plaintext"
+			],
+			"default": "javascript"
+		},
+		"filename": {
+			"type": "string",
+			"maxLength": 255
+		},
+		"showLineNumbers": {
+			"type": "boolean",
+			"default": true
+		},
+		"highlightLines": {
+			"type": "string",
+			"maxLength": 100
+		},
+		"caption": {
+			"type": "string",
+			"maxLength": 255,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"collectionName": "components_content_quotes",
+	"info": {
+		"displayName": "Quote",
+		"description": "Quote or blockquote content"
+	},
+	"options": {},
+	"attributes": {
+		"text": {
+			"type": "text",
+			"required": true,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"author": {
+			"type": "string",
+			"maxLength": 255,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"authorTitle": {
+			"type": "string",
+			"maxLength": 255,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"authorImage": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": [
+				"images"
+			]
+		},
+		"style": {
+			"type": "enumeration",
+			"enum": [
+				"default",
+				"highlighted",
+				"minimal",
+				"bordered"
+			],
+			"default": "default"
+		}
+	}
+}

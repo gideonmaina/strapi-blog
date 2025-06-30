@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_content_media_blocks",
+  "info": {
+    "displayName": "Media Block",
+    "description": "Media content block (images, videos)"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "caption": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "maxLength": 255
+    },
+    "altText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "maxLength": 255
+    },
+    "alignment": {
+      "type": "enumeration",
+      "default": "center",
+      "enum": [
+        "left",
+        "center",
+        "right",
+        "full-width"
+      ]
+    }
+  }
+}
