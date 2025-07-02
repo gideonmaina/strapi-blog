@@ -56,7 +56,7 @@
 			"type": "relation",
 			"relation": "manyToMany",
 			"target": "api::project.project",
-			"inversedBy": "tags"
+			"mappedBy": "tags"
 		}
 	}
 }
