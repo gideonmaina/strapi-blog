@@ -1,0 +1,123 @@
+{
+	"kind": "collectionType",
+	"collectionName": "projects",
+	"info": {
+		"singularName": "project",
+		"pluralName": "projects",
+		"displayName": "Project",
+		"description": "Projects showcasing my work"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {
+		"i18n": {
+			"localized": true
+		}
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"maxLength": 255,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"slug": {
+			"type": "uid",
+			"targetField": "title",
+			"required": true
+		},
+		"summary": {
+			"type": "text",
+			"maxLength": 500,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"description": {
+			"type": "richtext",
+			"required": true,
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"image": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": [
+				"images"
+			]
+		},
+		"gallery": {
+			"type": "media",
+			"multiple": true,
+			"required": false,
+			"allowedTypes": [
+				"images"
+			]
+		},
+		"featured": {
+			"type": "boolean",
+			"default": false
+		},
+		"completed": {
+			"type": "boolean",
+			"default": false
+		},
+		"startDate": {
+			"type": "date",
+			"required": true
+		},
+		"endDate": {
+			"type": "date"
+		},
+		"technologies": {
+			"type": "json",
+			"required": false
+		},
+		"category": {
+			"type": "relation",
+			"relation": "manyToOne",
+			"target": "api::category.category",
+			"inversedBy": "projects"
+		},
+		"tags": {
+			"type": "relation",
+			"relation": "manyToMany",
+			"target": "api::tag.tag",
+			"inversedBy": "projects"
+		},
+		"github": {
+			"type": "string",
+			"regex": "^(https?:\\/\\/)?([\\da-z.-]+)\\.([a-z.]{2,6})([\\/\\w .-]*)*\\/?$"
+		},
+		"website": {
+			"type": "string",
+			"regex": "^(https?:\\/\\/)?([\\da-z.-]+)\\.([a-z.]{2,6})([\\/\\w .-]*)*\\/?$"
+		},
+		"seo": {
+			"type": "component",
+			"repeatable": false,
+			"component": "seo.seo",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
+		},
+		"order": {
+			"type": "integer",
+			"default": 0,
+			"min": 0
+		}
+	}
+}

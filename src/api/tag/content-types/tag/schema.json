@@ -51,6 +51,12 @@
 			"relation": "manyToMany",
 			"target": "api::blog-post.blog-post",
 			"inversedBy": "tags"
+		},
+		"projects": {
+			"type": "relation",
+			"relation": "manyToMany",
+			"target": "api::project.project",
+			"inversedBy": "tags"
 		}
 	}
 }
