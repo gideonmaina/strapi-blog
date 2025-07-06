@@ -39,7 +39,8 @@
 				"dockerfile",
 				"nginx",
 				"apache",
-				"plaintext"
+				"plaintext",
+				"astro"
 			],
 			"default": "javascript"
 		},
