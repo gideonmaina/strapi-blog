@@ -1,0 +1,82 @@
+{
+	"kind": "collectionType",
+	"collectionName": "galleries",
+	"info": {
+		"singularName": "gallery",
+		"pluralName": "galleries",
+		"displayName": "Gallery",
+		"description": "Image galleries for events, seminars, conferences, and memorable moments"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {
+		"i18n": {
+			"localized": true
+		}
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"maxLength": 255
+		},
+		"slug": {
+			"type": "uid",
+			"targetField": "title",
+			"required": true
+		},
+		"altText": {
+			"type": "string",
+			"maxLength": 255
+		},
+		"description": {
+			"type": "text",
+			"maxLength": 1000
+		},
+		"media": {
+			"type": "media",
+			"multiple": false,
+			"required": true,
+			"allowedTypes": [
+				"images"
+			]
+		},
+		"content": {
+			"type": "dynamiczone",
+			"components": [
+				"content.rich-text",
+				"content.media-block",
+				"content.quote",
+				"content.callout",
+				"content.embed"
+			]
+		},
+		"category": {
+			"type": "enumeration",
+			"enum": [
+				"events",
+				"seminars",
+				"conferences",
+				"workshops",
+				"meetings",
+				"travel",
+				"achievements",
+				"personal",
+				"professional",
+				"other"
+			],
+			"default": "events"
+		},
+		"tags": {
+			"type": "json"
+		},
+		"location": {
+			"type": "string",
+			"maxLength": 255
+		},
+		"date": {
+			"type": "date"
+		}
+	}
+}
