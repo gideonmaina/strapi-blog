@@ -9,6 +9,8 @@ COPY . .
 # Install application dependencies
 RUN npm install
 
+RUN npm install pg --save
+
 # Expose the default port
 # Not: Strapi uses port 1337 by default
 EXPOSE 1337
