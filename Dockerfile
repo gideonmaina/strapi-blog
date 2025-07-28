@@ -9,9 +9,9 @@ COPY . .
 # Install application dependencies
 RUN npm install
 
-RUN npm install pg --save
+ARG NODE_ENV
 
-RUN NODE_ENV=production npm run build
+RUN NODE_ENV=$NODE_ENV npm run build
 
 # Expose the default port
 # Not: Strapi uses port 1337 by default
